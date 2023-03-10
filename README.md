@@ -17,9 +17,15 @@ git clone <<url>>
 ```
 Now, since we have the repo in our local machine, we can start working on it.
 ### 2. Protect the `main` branch
-To do so, we need to go to the repo's settings and then go to the `Branches` section. In this section, we need to check the `Protect this branch` checkbox and also
-the `Lock branch` and `Do not allow bypassing the above settings` and lastly, to apply these rules
-to the `main` branch, we will type the name `main` in the `Branch name pattern` field.
+To do so, we need to go to the repo's settings and then go to the `Branches` section. In this section, we need to check the `Protect this branch` checkbox.
+It will navigate us to a page where we can select the rules we want to apply to this
+branch, we will select the following:
+- Require pull request before merging
+    - Require approval
+- Do not allow bypassing the above settings
+
+And then we will click on the `Save changes` button. Now, we have protected the `main` branch.
+
 
 ### 3. Create different branches for each feature
 We have 3 features that are independent of each other, these features and their
@@ -102,3 +108,11 @@ containing the change exists in the `main` branch because of the pull request fr
 `feature/sample-service-conflict` branch).
 
 Images for the second merge conflict is as follows:
+- The following is the image of the conflict:
+![img.png](merge-conflict-2.png)
+- The following is the image of the step where we try to merge `main` into 
+my local branch `feature/sample-service-conflict` and we see the conflict:
+![img.png](merge-conflict-2-idea-merge.png)
+![img.png](merge-conflict-2-conflict-shown.png)
+- The following is the image of the conflict after resolve:
+![img.png](merge-conflict-2-after-resolve.png)
