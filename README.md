@@ -48,7 +48,7 @@ git push origin main-arch
 Now, we need to create a pull-request to transfer these changes to 
 the main branch.
 The image for this part is the following:
-![img.png](main-archTOmain.png)
+![img.png](PR[main-arch]-[main].png)
 
 Now, we need to complete the pull request.
 After that, we will create a new branch from `main` named 
@@ -56,4 +56,14 @@ After that, we will create a new branch from `main` named
 respective migrations. After that, we will push the changes to the remote repo and
 then create a pull request to transfer these changes to the `main` branch.
 
-Now, we only need to create the third branch and then implement the sample service
+Now, we only need to create the third branch and then implement the sample service.
+
+### 4. Create two merge conflicts and resolve them
+To create a merge conflict, we will create a new branch named `feature/sample-service-conflict`
+and in this branch, we will change a specific file and then push the changes to the
+remote repo. After that, we will create a pull request to transfer these changes to
+the `main` branch. Now, we will change the same file (in a way that git cannot resolve the conflict by itself)
+and then push the changes to the remote repo. After that, we will create a pull request
+to transfer these changes to the `main` branch. Now, we will go to the pull requests
+and see that there is a merge conflict.
+

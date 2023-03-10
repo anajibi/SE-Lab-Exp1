@@ -5,7 +5,10 @@
 import {Immutable} from '@src/other/types';
 
 const Paths = {
-  Base: '/api',
+    Base: '/api',
+    Sample: {
+        Base: "/sample",
+    }
 };
 
 // **** Export **** //

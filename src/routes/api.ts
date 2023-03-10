@@ -1,15 +1,16 @@
 import {Router} from 'express';
 
-import Paths from './constants/Paths';
-import logTypesRouter from '@src/routes/LogTypeRouter';
-import genSettingsRouter from '@src/routes/GenSettingsRouter';
-import {Knex} from "knex";
+import SampleRouter from '@src/routes/SampleRouter';
+import Paths from "@src/routes/constants/Paths";
+
 
 // **** Variables **** //
 
 const apiRouter = Router();
 
-// This is a modification to creat a merge conflict, it is not for any other purpose
+const sampleRouter = SampleRouter()
+
+apiRouter.use(Paths.Sample.Base, sampleRouter)
 // **** Export default **** //
 
 
