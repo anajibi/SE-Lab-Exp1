@@ -67,3 +67,4 @@ and then push the changes to the remote repo. After that, we will create a pull 
 to transfer these changes to the `main` branch. Now, we will go to the pull requests
 and see that there is a merge conflict.
 
+This change on the readme file is supposed to cause a merge conflict
