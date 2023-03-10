@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "removeComments": true,
+    "outDir": "dist.migrate",
+  },
+  "sourceRoot": "migrate",
+  "include": [
+    "migrate/**/*.ts",
+    "migrate/seeds/**/*.ts",
+  ],
+  "exclude": [
+    "spec",
+    "src/public/",
+    "build.ts"
+  ]
+}
