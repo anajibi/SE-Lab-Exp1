@@ -1,14 +1,16 @@
 import {Router} from 'express';
 
-import Paths from './constants/Paths';
-import logTypesRouter from '@src/routes/LogTypeRouter';
-import genSettingsRouter from '@src/routes/GenSettingsRouter';
+import SampleRouter from '@src/routes/SampleRouter';
+import Paths from "@src/routes/constants/Paths";
 
 
 // **** Variables **** //
 
 const apiRouter = Router();
 
+const sampleRouter = SampleRouter()
+
+apiRouter.use(Paths.Sample.Base, sampleRouter)
 // **** Export default **** //
 
 
