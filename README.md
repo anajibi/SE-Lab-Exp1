@@ -48,7 +48,7 @@ git push origin main-arch
 Now, we need to create a pull-request to transfer these changes to 
 the main branch.
 The image for this part is the following:
-![img.png](PR[main-arch]-[main].png)
+![img.png](main-archTOmain.png)
 
 Now, we need to complete the pull request.
 After that, we will create a new branch from `main` named 
@@ -67,4 +67,38 @@ and then push the changes to the remote repo. After that, we will create a pull 
 to transfer these changes to the `main` branch. Now, we will go to the pull requests
 and see that there is a merge conflict.
 
-This change on the readme file is supposed to cause a merge conflict
+After firstly merging branch `feature/sample-service-conflict` using a pull request,
+we will try to merge branch `feature/sample-service` using a pull request. And we see 
+the following in the pull request page in github:
+![img.png](merge-conflict-1.png)
+
+Since it is much easier to resolve conflicts on the idea, we try to merge `main` into
+our local feature branch `feature/sample-service` and we see the following:
+![img.png](merge-conflict-1-idea.png)
+After resolving these conflicts, we push the branch `feature/sample-service` to the remote repo
+and see the following in the pull request page:
+![img.png](merge-conflict-1-after-resolve.png)
+This indicates that the merge conflict is resolved and we can merge the branch `feature/sample-service`
+into the `main` branch.
+
+#### Merge conflict 2
+To create the second merge conflict, we will 
+do the same thing as the first merge conflict. I would like to take a moment 
+and explain more about merge conflicts and how they are caused and how we create them:
+A merge conflicts happens when git cannot decide how a file should look like
+after a merge, it usually happens when two branches start from the same commit
+and change the same file. In this case, git cannot decide which changes should
+be kept and which ones should be discarded. To resolve this, we need to manually
+resolve the conflict and then push the changes to the remote repo.
+
+Now, lets walk you through what I do, I firstly sync both branches
+`feature/sample-service-conflict` and `feature/sample-service` with the `main` branch so 
+the branches are up to date and start from the same commit. After that, I change the same file
+in both branches and then push the changes to the remote repo. Then, I create a pull request
+to transfer the changes from `feature/sample-service-conflict` to the `main` branch. Now, when the other
+branch (`feature/sample-service`) tries to merge the `main` branch, it will see a merge conflict since
+the file has been already changed in the `main` branch (due to the fact that the commit 
+containing the change exists in the `main` branch because of the pull request from the
+`feature/sample-service-conflict` branch).
+
+Images for the second merge conflict is as follows:
