@@ -49,3 +49,9 @@ Now, we need to create a pull-request to transfer these changes to
 the main branch.
 The image for this part is the following:
 ![img.png](PR[main-arch]-[main].png)
+
+Now, we need to complete the pull request.
+After that, we will create a new branch from `main` named 
+`feature/database` and then we will implement the database connection and the
+respective migrations. After that, we will push the changes to the remote repo and
+then create a pull request to transfer these changes to the `main` branch.

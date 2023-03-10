@@ -1,4 +1,5 @@
 /**
+ * This is the build tool for the migration.
  * Remove old files, build new files, and copy files.
  */
 
